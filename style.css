@@ -8,3 +8,25 @@ h1{
     text-align: center;
     color: white;
 }
+
+.choice{
+    display: flex;
+    margin-left: 5vh;
+    margin-top: 5vh;
+    text-align: center;
+    justify-content: space-around;
+}
+
+
+.clocksearch{
+    background-color: white;
+}
+
+.trending{
+    background-color: white;
+}
+
+.choiceimg{
+    width: 25vh;
+    height: 35vh;
+}
