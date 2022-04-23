@@ -1,32 +1,27 @@
 body{
-    background-image: url("background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("Bilder/background.jpg");
 }
 
-h1{
-    text-align: center;
-    color: white;
+header{
+  text-align: center;
+  -webkit-text-stroke: 1px yellow;
+  font-size: larger;
 }
 
-.choice{
-    display: flex;
-    margin-left: 5vh;
-    margin-top: 5vh;
-    text-align: center;
-    justify-content: space-around;
+.navigation{
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
 }
 
-
-.clocksearch{
-    background-color: white;
+.navigation , img{
+  width: 50vh;
 }
 
-.trending{
-    background-color: white;
-}
-
-.choiceimg{
-    width: 25vh;
-    height: 35vh;
+.nav{
+  background-color: white;
+  text-align: center;
+  border: 1px solid red;
+  border-radius: 50px;
 }
