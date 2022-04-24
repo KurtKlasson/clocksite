@@ -1,15 +1,16 @@
 
 
 const APP={
+  base: "https://swapi.dev/api/",
     urls:{
-        base: 'https://swapi.dev/api/',
         people: "people/",
         planet: "planets/",
         films: "films/",
         species: "species/",
         vehicles: "vehicles/",
         starships: "starships/",
-    },
+    }}
+  /*
     buildNav: () => {
         let df = new DocumentFragment();
         for (let nm in APP.urls) {
@@ -42,3 +43,34 @@ const APP={
             document.querySelector('.overlay').classList.remove('active');
           });
 }}
+*/
+
+let searchText = document.getElementById("txtSearch")
+console.log(searchText)
+
+searchText.onkeydown = async function (event){
+  if(event.key === "Enter"){
+    event.preventDefault()
+
+    let searchTerm = searchText.value
+    console.log("Söker efter ", searchTerm)
+
+    let results = await search(searchTerm)
+
+    renderResults(results)
+  }
+}
+
+
+async function search(searchString){
+  for(let nm in APP.urls){
+    let response = await fetch(`https://swapi.dev/api/${nm}?search=${searchString}`)
+    return response
+  }
+  let json = await response.json()
+return json
+}
+
+function renderResults (res){
+  console.log(res)
+}
