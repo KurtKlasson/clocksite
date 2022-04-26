@@ -25,3 +25,12 @@ header{
   border: 1px solid red;
   border-radius: 50px;
 }
+
+.shopping, img{
+  width: 25vh;
+}
+
+.shopping{
+  display: flex;
+  flex-direction: row wrap;
+}
