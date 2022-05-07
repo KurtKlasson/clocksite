@@ -25,9 +25,10 @@ header{
 .nav{
   background-color: white;
   text-align: center;
-  border: 1px solid red;
+  border: 1px solid;
   border-radius: 50px;
   justify-content: space-around;
+  color: Black;
 }
 
 .shopping, img{
@@ -35,8 +36,12 @@ header{
 }
 
 .shopping{
+  width: 60%;
+  margin-left: 40%;
+  flex-basis: 200px;
   display: flex;
-  flex-direction: row wrap;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 
