@@ -1,16 +1,13 @@
 
 
-
-const APP={
-  base: "https://swapi.dev/api/",
-        urls:{
-        people: "people/",
-        planet: "planets/",
-        films: "films/",
-        species: "species/",
-        vehicles: "vehicles/",
-        starships: "starships/",
-    }}
+const urls = [
+        "people/",
+        "planets/",
+        "films/",
+        "species/",
+        "vehicles/",
+        "starships/",
+      ]
   /*
     buildNav: () => {
         let df = new DocumentFragment();
@@ -56,14 +53,20 @@ searchText.onkeydown = async function (event){
     let searchTerm = searchText.value
     console.log("Söker efter ", searchTerm)
 
-    let results = APP.urls.forEach(await search(searchTerm))
+    let allresults = []
+    for (let i = 0; i < urls.length; i++){
+      console.log(urls[i])
+      let results = await search(searchTerm, urls[i])
+      allresults.push(results)
+    }
 
-    renderResults(results)
+   console.log(allresults)
+    renderResults()
   }
 }
 
 async function search(searchString, item){
-    let response = await fetch(`https://swapi.dev/api/${item}/?search=${searchString}`)
+    let response = await fetch(`https://swapi.dev/api/${item}?search=${searchString}`)
   
   let json = await response.json()
 return json

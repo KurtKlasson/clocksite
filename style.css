@@ -11,8 +11,11 @@ header{
 .navigation{
   width: 100vw;
   display: flex;
-  justify-content: space-between;
-  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-left: 70vh;
+  margin-top: 20vh;
+  gap: 80%;
+  flex-wrap: row;
 }
 
 .navigation , img{
@@ -24,6 +27,7 @@ header{
   text-align: center;
   border: 1px solid red;
   border-radius: 50px;
+  justify-content: space-around;
 }
 
 .shopping, img{
@@ -33,4 +37,15 @@ header{
 .shopping{
   display: flex;
   flex-direction: row wrap;
+}
+
+
+footer{
+  color: white;
+  margin-top: 10vh;
+  background-color: black;
+}
+
+a{
+  text-decoration: none;  
 }
