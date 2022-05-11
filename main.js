@@ -1,4 +1,4 @@
-
+let outputdiv = document.getElementById("output-div")
 
 const urls = [
         "people/",
@@ -49,7 +49,6 @@ console.log(searchText)
 searchText.onkeydown = async function (event){
   if(event.key === "Enter"){
     event.preventDefault()
-
     let searchTerm = searchText.value
     console.log("Söker efter ", searchTerm)
 
@@ -57,11 +56,13 @@ searchText.onkeydown = async function (event){
     for (let i = 0; i < urls.length; i++){
       console.log(urls[i])
       let results = await search(searchTerm, urls[i])
-      allresults.push(results)
+      console.log(results.count)
+      if(results.count != 0){
+      allresults.push(results)}
     }
 
-   console.log(allresults)
-    renderResults()
+   console.log("all results",allresults)
+    renderResults(allresults)
   }
 }
 
@@ -73,7 +74,15 @@ return json
 }
 
 function renderResults (res){
-  console.log(res)
+  res.forEach(element => {
+    console.log(element.results[0],"element")
+
+    // if(element.results[0] = 0){}
+    let resultDiv = `<div><div><h3>${element.results[0].name}</h3></div>`;
+
+    outputdiv.insertAdjacentHTML("AfterEnd", resultDiv);
+    
+  });
 }
 
 
