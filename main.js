@@ -77,10 +77,25 @@ function renderResults (res){
   res.forEach(element => {
     console.log(element.results[0],"element")
 
-    // if(element.results[0] = 0){}
-    let resultDiv = `<div><div><h3>${element.results[0].name}</h3></div>`;
 
-    outputdiv.insertAdjacentHTML("AfterEnd", resultDiv);
+    
+    if (element.results[0].gender != undefined){
+      console.log("lägger till en people")
+    let resultDiv = `<div><h3>${element.results[0].name}</h3>
+    <p> Birth year: ${element.results[0].birth_year}
+    <br>
+        Height: ${element.results[0].height}</p></div>`;
+        outputdiv.insertAdjacentHTML("AfterEnd", resultDiv);
+      } else if (element.results[0].climate != undefined){
+        console.log("söker på planet")
+      } else if (element.results[0].average_height != undefined){
+        console.log("det var en species")
+      } else if (element.results[0].director != undefined){
+        console.log("Det var en film")
+      } else if (element.results[0].crew != undefined){
+        console.log("Vehicle eller starship")
+      }
+
     
   });
 }
