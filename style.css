@@ -4,10 +4,12 @@ body{
 
 header{
   text-align: center;
-  -webkit-text-stroke: 1px yellow;
   font-size: larger;
 }
-
+.header{
+  color: black;
+  -webkit-text-stroke: 1px yellow;
+}
 .navigation{
   width: 100vw;
   display: flex;
@@ -20,10 +22,11 @@ header{
 
 .navigation , img{
   width: 50vh;
+  margin-top: 4vh;
 }
 
 .nav{
-  background-color: white;
+  background-color: gray;
   text-align: center;
   border: 1px solid;
   border-radius: 50px;
@@ -47,7 +50,7 @@ header{
 
 footer{
   color: white;
-  margin-top: 10vh;
+  margin-top: 35vh;
   background-color: black;
 }
 
@@ -57,4 +60,39 @@ a{
 
 .output-div {
   color: white;
+  text-align: center;
+  margin-left: 50vh;
+  margin-right: 50vh;
+  font-size: larger;
+}
+.txtSearch{
+  text-align: center;
+  margin-top: 10vh;
+}
+
+#txtSearch{
+  height: 5vh;
+  width: 30vh;
+  border-radius: 5vh;
+  font-size: larger;
+}
+
+.title{
+  text-align: center;
+  -webkit-text-stroke: 1px yellow;
+}
+.information{
+  position: absolute;
+  right: 5vh;
+  bottom: 1vh;
+}
+.contactTxt{
+  color: black;
+}
+.contact{
+  position: absolute;
+  left: 87vh;
+  bottom: 6vh;
+  width: 15vh;
+  height: 5vh;
 }
