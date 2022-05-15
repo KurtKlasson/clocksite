@@ -1,32 +1,35 @@
-body{
+body {
   background-image: url("Bilder/background.jpg");
 }
 
-header{
+header {
   text-align: center;
   font-size: larger;
 }
-.header{
+.header {
   color: black;
   -webkit-text-stroke: 1px yellow;
 }
-.navigation{
+.navigation {
   width: 100vw;
   display: flex;
   justify-content: space-around;
-  margin-left: 70vh;
-  margin-top: 20vh;
-  gap: 80%;
   flex-wrap: row;
+  gap: 50%;
+  margin-left: 35%;
 }
 
-.navigation , img{
+.navigation,
+img {
   width: 50vh;
   margin-top: 4vh;
 }
 
-.nav{
-  background-color: gray;
+.nav {
+  background-color: darkgray;
+  animation-name: navigation1;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
   text-align: center;
   border: 1px solid;
   border-radius: 50px;
@@ -34,28 +37,31 @@ header{
   color: Black;
 }
 
-.shopping, img{
+.shopping,
+img {
   width: 25vh;
 }
 
-.shopping{
+.shopping {
   width: 60%;
   margin-left: 40%;
   flex-basis: 200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-bottom: 40vh;
 }
 
-
-footer{
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background: black;
   color: white;
-  margin-top: 35vh;
-  background-color: black;
 }
 
-a{
-  text-decoration: none;  
+a {
+  text-decoration: none;
 }
 
 .output-div {
@@ -65,34 +71,51 @@ a{
   margin-right: 50vh;
   font-size: larger;
 }
-.txtSearch{
+.txtSearch {
   text-align: center;
   margin-top: 10vh;
 }
 
-#txtSearch{
+#txtSearch {
   height: 5vh;
   width: 30vh;
   border-radius: 5vh;
   font-size: larger;
 }
 
-.title{
+.title {
   text-align: center;
   -webkit-text-stroke: 1px yellow;
 }
-.information{
-  position: absolute;
-  right: 5vh;
-  bottom: 1vh;
+.information {
+  position: relative;
+  left: 90%;
+  width: 40vh;
 }
-.contactTxt{
+.contactTxt {
   color: black;
 }
-.contact{
+.contact {
+  font-size: larger;
+}
+.infoTxt{
+  width: 40vh;
+}
+
+table, th, td {
+  border: 1px solid;
+  color: white;
+  height: 40px;
+}
+table{
   position: absolute;
-  left: 87vh;
-  bottom: 6vh;
-  width: 15vh;
-  height: 5vh;
+  left: 5%; 
+  top: 5%;
+  width: 20%;
+}
+
+@keyframes navigation1 {
+  0% {background-color: darkgray;}
+  50% {background-color: purple;}
+  100% {background-color: darkgray;}
 }
